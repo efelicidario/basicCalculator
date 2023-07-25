@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 namespace my_calc
@@ -8,41 +9,27 @@ namespace my_calc
         private string currentInput = "";
         private double currentResult = 0.0;
         private char lastOperator = ' ';
-        //private bool isCalculationPending = false;
-        private double pendingOperand = 0.0; // New variable to track pending operand
-        private char pendingOperator = ' '; // New variable to track pending operator
 
         public Form1()
         {
             InitializeComponent();
             textBoxResult.Text = "0";
-            // buttonEquals.Click += buttonEquals_Click;
-
         }
 
         private void buttonNum_Click(object sender, EventArgs e)
         {
             // Check if the result is zero and display a single "0" without multiple zeros.
-            if (currentInput == "0")
-            {
-                textBoxResult.Text = currentInput;
-            }
+            if (currentInput == "0") { textBoxResult.Text = currentInput; }
             else
             {
                 Button button = (Button)sender;
                 currentInput += button.Text;
                 textBoxResult.Text = currentInput;
             }
-            /*
-            Button button = (Button)sender;
-            currentInput += button.Text;
-            textBoxResult.Text = currentInput;
-            */
         }
 
         private void buttonOp_Click(object sender, EventArgs e)
         {
-            
             if (currentInput != "")
             {
                 Calculate();
@@ -51,6 +38,7 @@ namespace my_calc
                 currentInput = "";
             }
         }
+
 
         private void Calculate()
         {
@@ -69,8 +57,19 @@ namespace my_calc
                         currentResult *= input;
                         break;
                     case '÷':
-                        currentResult /= input;
-                        break;
+                        // Handle division by zero error
+                        if (input == 0)
+                        {
+                            MessageBox.Show("Cannot divide by zero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            currentResult = 0.0;
+                            textBoxResult.Text = "0";
+                            break;
+                        }
+                        else
+                        {
+                            currentResult /= input;
+                            break;
+                        }
                     default:
                         currentResult = input;
                         break;
@@ -78,15 +77,6 @@ namespace my_calc
             }
         }
 
-        /*
-        private void divisionByZero()
-        {
-            currentInput = "";
-            lastOperator = ' ';
-            isCalculationPending = false;
-            textBoxResult.Text = "Error: Division by zero";
-        }
-        */
 
         private void buttonEquals_Click(object sender, EventArgs e)
         {
@@ -118,9 +108,6 @@ namespace my_calc
             currentInput = "";
             currentResult = 0.0;
             lastOperator = ' ';
-            //isCalculationPending = false;
-            pendingOperand = 0;
-            pendingOperator = ' ';
             textBoxResult.Text = "0";
         }
 
@@ -135,6 +122,11 @@ namespace my_calc
         }
 
         private void buttonMultiply_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxResult_TextChanged(object sender, EventArgs e)
         {
 
         }

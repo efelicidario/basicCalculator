@@ -241,6 +241,7 @@
             textBoxResult.Size = new Size(252, 40);
             textBoxResult.TabIndex = 0;
             textBoxResult.TextAlign = HorizontalAlignment.Right;
+            textBoxResult.TextChanged += textBoxResult_TextChanged;
             // 
             // buttonClear
             // 
