@@ -14,6 +14,7 @@ namespace my_calc
         {
             InitializeComponent();
             textBoxResult.Text = "0";
+            //buttonDecimal.Click += buttonDecimal_Click;
         }
 
         private void buttonNum_Click(object sender, EventArgs e)
@@ -51,10 +52,10 @@ namespace my_calc
                     case '-':
                         currentResult -= input;
                         break;
-                    case '�':
+                    case '×':
                         currentResult *= input;
                         break;
-                    case '�':
+                    case '÷':
                         if (input == 0)
                         {
                             MessageBox.Show("Cannot divide by zero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -67,10 +68,22 @@ namespace my_calc
                             currentResult /= input;
                             break;
                         }
+                    case '%':
+                        currentResult = input / 100.0;
+                        break;
                     default:
                         currentResult = input;
                         break;
                 }
+            }
+        }
+
+        private void buttonDecimal_Click(object sender, EventArgs e)
+        {
+            if (!currentInput.Contains("."))
+            {
+                currentInput += ".";
+                textBoxResult.Text = currentInput;
             }
         }
 
@@ -83,7 +96,7 @@ namespace my_calc
 
         private void buttonClearEntry_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(currentInput))
+            if (currentInput != "")
             {
                 currentInput = currentInput.Remove(currentInput.Length - 1);
                 textBoxResult.Text = currentInput;

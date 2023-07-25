@@ -47,6 +47,9 @@
             textBoxResult = new TextBox();
             buttonClear = new Button();
             buttonClearEntry = new Button();
+            buttonDecimal = new Button();
+            buttonPercent = new Button();
+            buttonPosNeg = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -267,12 +270,48 @@
             buttonClearEntry.UseVisualStyleBackColor = false;
             buttonClearEntry.Click += buttonClearEntry_Click;
             // 
+            // buttonDecimal
+            // 
+            buttonDecimal.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonDecimal.Location = new Point(144, 342);
+            buttonDecimal.Name = "buttonDecimal";
+            buttonDecimal.Size = new Size(60, 60);
+            buttonDecimal.TabIndex = 18;
+            buttonDecimal.Text = ".";
+            buttonDecimal.UseVisualStyleBackColor = true;
+            buttonDecimal.Click += buttonDecimal_Click;
+            // 
+            // buttonPercent
+            // 
+            buttonPercent.BackColor = SystemColors.ControlLight;
+            buttonPercent.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonPercent.Location = new Point(15, 78);
+            buttonPercent.Name = "buttonPercent";
+            buttonPercent.Size = new Size(60, 60);
+            buttonPercent.TabIndex = 19;
+            buttonPercent.Text = "%";
+            buttonPercent.UseVisualStyleBackColor = false;
+            buttonPercent.Click += buttonOp_Click;
+            // 
+            // buttonPosNeg
+            // 
+            buttonPosNeg.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonPosNeg.Location = new Point(12, 342);
+            buttonPosNeg.Name = "buttonPosNeg";
+            buttonPosNeg.Size = new Size(60, 60);
+            buttonPosNeg.TabIndex = 20;
+            buttonPosNeg.Text = "±";
+            buttonPosNeg.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(311, 422);
+            Controls.Add(buttonPosNeg);
+            Controls.Add(buttonPercent);
+            Controls.Add(buttonDecimal);
             Controls.Add(buttonClearEntry);
             Controls.Add(buttonClear);
             Controls.Add(panel1);
@@ -320,5 +359,8 @@
         private TextBox textBoxResult;
         private Button buttonClear;
         private Button buttonClearEntry;
+        private Button buttonDecimal;
+        private Button buttonPercent;
+        private Button buttonPosNeg;
     }
 }
