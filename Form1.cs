@@ -14,7 +14,6 @@ namespace my_calc
         {
             InitializeComponent();
             textBoxResult.Text = "0";
-            //buttonDecimal.Click += buttonDecimal_Click;
         }
 
         private void buttonNum_Click(object sender, EventArgs e)
@@ -69,7 +68,7 @@ namespace my_calc
                             break;
                         }
                     case '%':
-                        currentResult = input / 100.0;
+                        currentResult %= input;
                         break;
                     default:
                         currentResult = input;
