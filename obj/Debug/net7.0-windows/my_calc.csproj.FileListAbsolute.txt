@@ -1,0 +1,17 @@
+C:\Users\Ty\Desktop\my_calc\bin\Debug\net7.0-windows\my_calc.exe
+C:\Users\Ty\Desktop\my_calc\bin\Debug\net7.0-windows\my_calc.deps.json
+C:\Users\Ty\Desktop\my_calc\bin\Debug\net7.0-windows\my_calc.runtimeconfig.json
+C:\Users\Ty\Desktop\my_calc\bin\Debug\net7.0-windows\my_calc.dll
+C:\Users\Ty\Desktop\my_calc\bin\Debug\net7.0-windows\my_calc.pdb
+C:\Users\Ty\Desktop\my_calc\obj\Debug\net7.0-windows\my_calc.csproj.AssemblyReference.cache
+C:\Users\Ty\Desktop\my_calc\obj\Debug\net7.0-windows\my_calc.Form1.resources
+C:\Users\Ty\Desktop\my_calc\obj\Debug\net7.0-windows\my_calc.csproj.GenerateResource.cache
+C:\Users\Ty\Desktop\my_calc\obj\Debug\net7.0-windows\my_calc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ty\Desktop\my_calc\obj\Debug\net7.0-windows\my_calc.AssemblyInfoInputs.cache
+C:\Users\Ty\Desktop\my_calc\obj\Debug\net7.0-windows\my_calc.AssemblyInfo.cs
+C:\Users\Ty\Desktop\my_calc\obj\Debug\net7.0-windows\my_calc.csproj.CoreCompileInputs.cache
+C:\Users\Ty\Desktop\my_calc\obj\Debug\net7.0-windows\my_calc.dll
+C:\Users\Ty\Desktop\my_calc\obj\Debug\net7.0-windows\refint\my_calc.dll
+C:\Users\Ty\Desktop\my_calc\obj\Debug\net7.0-windows\my_calc.pdb
+C:\Users\Ty\Desktop\my_calc\obj\Debug\net7.0-windows\my_calc.genruntimeconfig.cache
+C:\Users\Ty\Desktop\my_calc\obj\Debug\net7.0-windows\ref\my_calc.dll
