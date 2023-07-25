@@ -1,5 +1,5 @@
 # Basic Calculator - C#
-Edmund Tyler Felicidario
+Edmund Tyler Felicidario  
 July 25, 2023
 
 ### Background
@@ -17,6 +17,7 @@ A button-driven basic calculator GUI that can handle simple operations.
 - Calculator initialized to 0
 - Displays a single 0 without multiple 0's
 - Handles division by zero error
+- CE/C buttons
 
 ### Test Cases
 - 1 + 0

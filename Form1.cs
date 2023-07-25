@@ -18,7 +18,6 @@ namespace my_calc
 
         private void buttonNum_Click(object sender, EventArgs e)
         {
-            // Check if the result is zero and display a single "0" without multiple zeros.
             if (currentInput == "0") { textBoxResult.Text = currentInput; }
             else
             {
@@ -39,7 +38,6 @@ namespace my_calc
             }
         }
 
-
         private void Calculate()
         {
             if (currentInput != "")
@@ -53,11 +51,10 @@ namespace my_calc
                     case '-':
                         currentResult -= input;
                         break;
-                    case '×':
+                    case 'ï¿½':
                         currentResult *= input;
                         break;
-                    case '÷':
-                        // Handle division by zero error
+                    case 'ï¿½':
                         if (input == 0)
                         {
                             MessageBox.Show("Cannot divide by zero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -77,28 +74,18 @@ namespace my_calc
             }
         }
 
-
         private void buttonEquals_Click(object sender, EventArgs e)
         {
-            // Perform any pending calculation first
             Calculate();
-
-            // Reset currentInput and pending values for potential new calculations
             currentInput = "";
-
-            // Display the final result
             textBoxResult.Text = currentResult.ToString();
         }
 
         private void buttonClearEntry_Click(object sender, EventArgs e)
         {
-            // Check if there is any input to clear
             if (!string.IsNullOrEmpty(currentInput))
             {
-                // Remove the last character from the current input
                 currentInput = currentInput.Remove(currentInput.Length - 1);
-
-                // Update the output display
                 textBoxResult.Text = currentInput;
             }
         }
