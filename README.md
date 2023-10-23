@@ -1,6 +1,5 @@
-# Basic Calculator - C#
-Edmund Tyler Felicidario  
-July 25, 2023
+# Basic Calculator
+C# | .NET | Windows Forms
 
 ### Background
 A button-driven basic calculator GUI that can handle simple operations.
