@@ -1,6 +1,8 @@
 # Basic Calculator
 C# | .NET | Windows Forms
 
+![calc](https://github.com/efelicidario/basicCalculator/assets/66488676/98093dd3-5d5a-4e0b-a27d-f153b46889e4)
+
 ### Background
 A button-driven basic calculator GUI that can handle simple operations.
 
