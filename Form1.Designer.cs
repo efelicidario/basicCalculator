@@ -244,7 +244,6 @@
             textBoxResult.Size = new Size(252, 40);
             textBoxResult.TabIndex = 0;
             textBoxResult.TextAlign = HorizontalAlignment.Right;
-            textBoxResult.TextChanged += textBoxResult_TextChanged;
             // 
             // buttonClear
             // 
@@ -332,7 +331,6 @@
             Controls.Add(button0);
             Name = "Form1";
             Text = "Calculator";
-            Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

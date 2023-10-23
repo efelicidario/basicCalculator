@@ -109,25 +109,5 @@ namespace my_calc
             lastOperator = ' ';
             textBoxResult.Text = "0";
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonMultiply_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxResult_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
